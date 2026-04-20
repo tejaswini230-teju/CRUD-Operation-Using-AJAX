@@ -32,10 +32,12 @@ function displayUsers(users) {
         <td>${user.name}</td>
         <td>${user.age}</td>
         <td>
-          <button class="btn btn-info btn-sm" onclick="viewUser('${user.id}', '${user.name}', '${user.age}')">View</button>
-          <button class="btn btn-warning btn-sm" onclick="editUser('${user.id}','${user.name}','${user.age}')">Edit</button>
-          <button class="btn btn-danger btn-sm" onclick="deleteUser('${user.id}')">Delete</button>
-        </td>
+        <div class="d-flex justify-content-center gap-1 flex-nowrap">
+          <button class="btn btn-info btn-sm" onclick="viewUser('${user.id}', '${user.name}', '${user.age}')"><i class="bi bi-eye"></i><span class="d-none d-sm-inline"> View</span></button>
+          <button class="btn btn-warning btn-sm" onclick="editUser('${user.id}','${user.name}','${user.age}')"><i class="bi bi-pencil-square"></i><span class="d-none d-sm-inline"> Edit</span></button>
+          <button class="btn btn-danger btn-sm" onclick="deleteUser('${user.id}')"><i class="bi bi-trash"></i><span class="d-none d-sm-inline"> Delete</span></button>
+        </div>
+          </td>
       </tr>
     `;
   });
